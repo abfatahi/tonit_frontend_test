@@ -8,7 +8,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import { LoginComponent, RegisterComponent } from './pages/Authentication';
-import { Account, Home, Transfer } from './pages/Dashboard';
+import {  Home } from './pages/Dashboard';
 import { ProtectedRoute } from './hooks';
 
 function App() {
@@ -22,12 +22,6 @@ function App() {
         {/* Dashboard Routes */}
         <Route path='/' element={<ProtectedRoute />}>
           <Route path='/' element={<Home />} />
-        </Route>
-        <Route path='/' element={<ProtectedRoute />}>
-          <Route path='/account/*' element={<Account />} />
-        </Route>
-        <Route path='/' element={<ProtectedRoute />}>
-          <Route path='/transfer/*' element={<Transfer />} />
         </Route>
         
         {/* 404 Routes */}

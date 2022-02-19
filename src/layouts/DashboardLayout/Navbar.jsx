@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaUser, FaBell, FaChevronCircleLeft, FaBars } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { Logo as logo } from '../../assets/images';
 
 const Navbar = (props) => {
   const loggedInUser = JSON.parse(localStorage.getItem('user'));
+
   const Navigate = useNavigate();
+
   const signout = () => {
     localStorage.removeItem('token');
     Navigate('/login');
@@ -76,11 +77,11 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.img`
-  width: 60px;
-  height: 80%;
-  object-fit: fill;
-`;
+// const Logo = styled.img`
+//   width: 60px;
+//   height: 80%;
+//   object-fit: fill;
+// `;
 
 const NavMenu = styled.div`
   position: relative;
